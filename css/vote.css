@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: auto;
+
+  display: flex;
+  /* align-items: center;
+    justify-content: center; */
+  /* background-image: linear-gradient(to bottom, #a905f2, #8c06d9, #7105c0, #5702a7, #3e008e); */
+  background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(0, 44, 81, 0.7)),
+    url("/finalsProj/img/edsa2.jpg");
+  /* background-repeat:no-repeat;
+      background-position: center center;   
+      background-size: cover;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+/* Navbar */
+nav {
+  word-wrap: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  /* padding: 10px 90px; */
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 3px 0 rgba(0, 44, 81, 0.7);
+}
+/* Navbar */
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5%;
+
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+
+  justify-content: center;
+  align-items: center;
+}
+footer ul {
+  float: right;
+}
+footer ul li {
+  text-decoration: none;
+  display: inline-block;
+
+  color: rgb(255, 255, 255);
+  display: block;
+
+  padding: auto;
+  margin: auto;
+  position: relative;
+  font-family: sans-serif;
+}
+/* Footer */
+/* inside nav bar*/
+
+.logo {
+  float: right;
+
+  padding: 10px 3px;
+  margin-left: auto !important;
+}
+.register {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+.register2 {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+nav ul {
+  list-style: none;
+
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: block;
+  font-weight: 200;
+  /* padding: 18px 5px 5px; */
+  position: relative;
+  font-family: sans-serif;
+  z-index: 1;
+}
+li {
+  display: inline;
+  float: left;
+  /* padding: 15px 35px; */
+}
+/* inside nav bar*/
+
+a {
+  margin: 0px 0px;
+  padding: 25px 32px;
+}
+
+a:visited {
+  color: white;
+}
+
+/* a:focus {
+
+} */
+
+a:hover {
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  transition: 0.3s;
+}
+
+nav .vote {
+  background-color: rgb(95, 95, 95);
+  color: rgb(255, 255, 255);
+}
+
+a:active {
+  background-color: white;
+}
+/*
+a:visited{
+    background-color: white;
+} */
+
+/*Nav animation*/
+@import url("https://fonts.googleapis.com/css?family=Exo&display=swap");
+
+.wrapper {
+  width: 1300px;
+  height: 700px;
+  background: #f7f7f7;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.wrapper .radio_tabs {
+  height: 60px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 18px;
+  display: flex;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.wrapper .radio_tabs label {
+  margin-right: 15px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 28px;
+}
+
+.wrapper .radio_tabs .radio_mark:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  /* https://i.imgur.com/3OGSx5M.png.png */
+  background: url("/finalsProj/img/yop.png") no-repeat 0 0;
+  width: 22px;
+  height: 22px;
+}
+
+.wrapper .radio_tabs label .input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.wrapper .radio_tabs label .input:checked ~ .radio_mark {
+  color: #07547b;
+}
+
+.wrapper .radio_tabs label .input:checked ~ .radio_mark:before {
+  background-position: 0 -23px;
+  width: 22px;
+  height: 22px;
+}
+
+.wrapper .content {
+  width: 100%;
+  height: calc(100% - 70px);
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 18px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+
+/* .wrapper .content p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 15px;
+} */
+.wrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper2 > h2 {
+  margin-bottom: 30px;
+  color: #07547b;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.radio-buttons {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+.radio-btn {
+  position: relative;
+  width: 234px;
+  height: 290px;
+  margin: 10px;
+  background-color: #222533;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.radio-btn .content1 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-btn .profile-img {
+  width: 80px;
+  height: 80px;
+  margin: 20px 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.radio-btn .profile-img img {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.radio-btn h2 {
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.radio-btn .party {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #c3c2c7;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.radio-btn .check-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #1b1d28;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.radio-btn .check-icon .icon {
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 8px;
+  margin-top: -2px;
+  transform: rotate(-40deg);
+}
+
+.radio-btn .check-icon .icon::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.231);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-btn .check-icon .icon::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.231);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.custom-radio input:checked + .radio-btn {
+  border: 4px solid #098bccb6;
+}
+
+.custom-radio input:checked + .radio-btn .check-icon {
+  background-color: #037ebc6f;
+}
+
+.custom-radio input:checked + .radio-btn .check-icon .icon::before,
+.custom-radio input:checked + .radio-btn .check-icon .icon::after {
+  transform: scale(1);
+}
+
+.nav_btn {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+.nav_btn button {
+  padding: 12px 0;
+  width: 10%;
+  border-radius: 3px;
+  border: 0;
+  background: rgb(0, 30, 46);
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.nav_btn button:hover {
+  background-color: white;
+  color: rgb(0, 30, 46);
+  border: 1px solid rgb(0, 30, 46);
+}
+
+.popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 800px;
+  height: 600px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.popup .close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.popup.active .overlay {
+  display: block;
+}
+
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+table.selected-candidates {
+  width: 100%;
+  padding: 20px 10%;
+}
+
+table.selected-candidates th {
+  width: 50%;
+}
+
+table.selected-candidates th,
+table.selected-candidates td {
+  padding: 5px 0;
+}

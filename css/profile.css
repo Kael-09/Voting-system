@@ -1,0 +1,365 @@
+body {
+  min-height: 100vh;
+  margin: auto;
+
+  display: flex;
+  /* align-items: center;
+    justify-content: center; */
+  /* background-image: linear-gradient(to bottom, #a905f2, #8c06d9, #7105c0, #5702a7, #3e008e); */
+  background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(0, 44, 81, 0.7)),
+    url("/finalsProj/img/edsa2.jpg");
+  /* background-repeat:no-repeat;
+      background-position: center center;   
+      background-size: cover;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+/* Navbar */
+nav {
+  word-wrap: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  /* padding: 10px 90px; */
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 3px 0 rgba(0, 44, 81, 0.7);
+}
+/* Navbar */
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5%;
+
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+
+  justify-content: center;
+  align-items: center;
+}
+footer ul {
+  float: right;
+}
+footer ul li {
+  text-decoration: none;
+  display: inline-block;
+
+  color: rgb(255, 255, 255);
+  display: block;
+
+  padding: auto;
+  margin: auto;
+  position: relative;
+  font-family: sans-serif;
+}
+/* Footer */
+/* inside nav bar*/
+
+.logo {
+  float: right;
+
+  padding: 10px 3px;
+  margin-left: auto !important;
+}
+.register {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+.register2 {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+nav ul {
+  list-style: none;
+
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: block;
+  font-weight: 200;
+  /* padding: 18px 5px 5px; */
+  position: relative;
+  font-family: sans-serif;
+  z-index: 1;
+}
+li {
+  display: inline;
+  float: left;
+  /* padding: 15px 35px; */
+}
+/* inside nav bar*/
+
+a {
+  margin: 0px 0px;
+  padding: 25px 32px;
+}
+
+a:visited {
+  color: white;
+}
+
+/* a:focus {
+
+} */
+
+a:hover {
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  transition: 0.3s;
+}
+
+nav .prof {
+  background-color: rgb(95, 95, 95);
+  color: rgb(255, 255, 255);
+}
+
+a:active {
+  background-color: white;
+}
+/*
+a:visited{
+    background-color: white;
+} */
+
+/*Nav animation*/
+.wrapper {
+  width: 1000px;
+  height: 600px;
+  background: white;
+  margin: 110px auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+.container2 {
+  /* border: 1px solid rgba(3, 58, 69, 0.7); */
+  display: grid;
+  height: 60vh;
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  padding: 20px;
+  grid-template-areas:
+    "info address"
+    "info notif";
+  grid-gap: 2%;
+  border-radius: 20px;
+}
+#info {
+  background: rgba(3, 58, 69, 0.2);
+  grid-area: info;
+  border-radius: 5px;
+}
+.info-content {
+  font-family: sans-serif;
+  color: #087e7e;
+  display: grid;
+  align-items: center; /* left and right */
+  justify-content: center; /* up and down */
+  height: 60vh;
+  grid-template-columns: 0.2fr 0.7fr;
+  grid-template-rows: 0.2fr, 0.2fr, 0.2fr, 0.2fr, 0.2fr, 0.2fr, 0.2fr;
+
+  grid-template-areas:
+    "profile profile"
+    "name name"
+    "hline hline"
+    "pic data"
+    "gender gtext"
+    "email etext"
+    "con ctext";
+}
+
+.image {
+  grid-area: profile;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  text-align: center;
+}
+.name {
+  grid-area: name;
+
+  text-align: center;
+}
+.line {
+  grid-area: hline;
+}
+.birthday-icon {
+  grid-area: pic;
+
+  text-align: center;
+}
+.birthday-text {
+  grid-area: data;
+
+  text-align: left;
+}
+.gender-icon {
+  grid-area: gender;
+  text-align: center;
+}
+.gender-text {
+  grid-area: gtext;
+  text-align: left;
+}
+.email-icon {
+  grid-area: email;
+  text-align: center;
+}
+.email-text {
+  grid-area: etext;
+  text-align: left;
+}
+.contact-icon {
+  grid-area: con;
+  text-align: center;
+}
+.contact-text {
+  grid-area: ctext;
+  text-align: left;
+}
+
+#address {
+  background: rgba(3, 58, 69, 0.2);
+  grid-area: address;
+  border-radius: 5px;
+}
+#notif {
+  background: rgba(3, 58, 69, 0.2);
+  grid-area: notif;
+  border-radius: 5px;
+}
+
+.container2 img {
+  width: 30px;
+  height: 30px;
+}
+.address-content {
+  font-family: sans-serif;
+  color: #087e7e;
+  display: grid;
+  align-items: center; /* left and right */
+  justify-content: center; /* up and down */
+
+  grid-template-columns: 0.2fr 0.7fr 0.7fr;
+  grid-template-rows: 0.2fr, 0.2fr, 0.2fr;
+  grid-template-areas:
+    "address atext atext"
+    "aline aline aline"
+    "btext btext btext"
+    "cmtext cmtext cmtext"
+    "ptext ptext ptext";
+}
+.hline {
+  grid-area: aline;
+  text-align: center;
+}
+.address-icon {
+  margin-top: 25px;
+  grid-area: address;
+  text-align: right;
+}
+.address-text {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 25px;
+  grid-area: atext;
+  text-align: left;
+}
+.brgy-text {
+  margin-left: 140px;
+  margin-top: 30px;
+  grid-area: btext;
+  text-align: left;
+  font-size: 20px;
+}
+.cm-text {
+  margin-left: 140px;
+  grid-area: cmtext;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.prov-text {
+  margin-left: 140px;
+  grid-area: ptext;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.notif-content {
+  font-family: sans-serif;
+  color: #087e7e;
+  display: grid;
+  align-items: center; /* left and right */
+  justify-content: center; /* up and down */
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr, 0.2fr;
+  grid-template-areas:
+    "notif"
+    "ntext";
+}
+.notif-icon {
+  margin-top: 25px;
+  grid-area: notif;
+  text-align: center;
+}
+.notif-text {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 25px;
+  grid-area: ntext;
+  text-align: center;
+}
+
+.vote-status {
+  display: flex;
+  height: 100%;
+}
+.vote-status span {
+  margin: auto;
+  font-weight: 700;
+  font-size: 35px;
+}
